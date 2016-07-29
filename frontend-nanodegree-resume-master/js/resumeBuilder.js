@@ -67,7 +67,7 @@ var work = {
 };
 
 function displayWork() {
-    for (job in work.jobs) {
+    for (var job in work.jobs) {
         $("#workExperience").append(HTMLworkStart);
 
         var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
@@ -103,7 +103,7 @@ var education = {
 
 
 education.display = function() {
-    for (schools in education.schools) {
+    for (var schools in education.schools) {
         $("#education").append(HTMLschoolStart);
 
         var formattedSchoolName = HTMLschoolName.replace("%data%", education.schools[schools].school);
@@ -119,7 +119,7 @@ education.display = function() {
     }
 
 
-    for (onlineCourses in education.onlineCourses) {
+    for (var onlineCourses in education.onlineCourses) {
         $("#education").append(HTMLschoolStart);
 
         var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[onlineCourses].title);
@@ -148,7 +148,7 @@ var projects = {
 };
 
 projects.display = function() {
-    for (project in projects.projects) {
+    for (var project in projects.projects) {
         $("#projects").append(HTMLprojectStart);
         var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title);
         $(".project-entry:last").append(formattedTitle);
@@ -157,7 +157,7 @@ projects.display = function() {
         var formattedDescription = HTMLprojectDescription.replace("%data%", projects.projects[project].description);
         $(".project-entry:last").append(formattedDescription);
         if (projects.projects[project].images.length > 0) {
-            for (image in projects.projects[project].images) {
+            for (var image in projects.projects[project].images) {
                 var formattedImage = HTMLprojectImage.replace("%data%", projects.projects[project].images[image]);
                 $(".project-entry:last").append(formattedImage);
             }
