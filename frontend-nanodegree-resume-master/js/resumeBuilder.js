@@ -44,6 +44,7 @@ var bio = {
 				for (var i = 1; i < bio.skills.length; i++) {
 					formattedSkills = HTMLskills.replace("%data%", bio.skills[i]);
 					$("#skills").append(formattedSkills);
+				}
 			}
 		}
 	}
