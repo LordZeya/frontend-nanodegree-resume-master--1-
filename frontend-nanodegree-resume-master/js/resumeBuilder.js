@@ -11,19 +11,17 @@ var bio = {
     },
     "welcomeMessage": "Welcome!",
     "skills": ["Writing", "Starcraft 2", "Dota 2", "Reading"],
-    "bioPic": "images/fry.jpg"
+    "biopic": "images/fry.jpg"
 };
 
-if (bio.skills.length > 0) {
-    $("#header").append(HTMLskillsStart);
-    var formattedSkill = HTMLskills.replace("%data%", bio.skills[0]);
-    $("#skills").append(formattedSkill);
-    formattedSkill = HTMLskills.replace("%data%", bio.skills[1]);
-    $("#skills").append(formattedSkill);
-    formattedSkill = HTMLskills.replace("%data%", bio.skills[2]);
-    $("#skills").append(formattedSkill);
-    formattedSkill = HTMLskills.replace("%data%", bio.skills[3]);
-    $("#skills").append(formattedSkill);
+if(bio.skills.length > 0) {
+	$("#header").append(HTMLskillsStart);
+	var formattedSkills = HTMLskills.replace("%data%", bio.skills[0]);
+	$("#skills").append(formattedSkills);
+
+	for (var i = 1; i < bio.skills.length; i++) {
+		formattedSkills = HTMLskills.replace("%data%", bio.skills[i]);
+$("#skills").append(formattedSkills);
 }
 
 var formattedName = HTMLheaderName.replace("%data%", bio.name);
@@ -36,7 +34,7 @@ var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
 var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
 
 var formattedWelcomeMessage = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
-var formattedBioPic = HTMLbioPic.replace("%data%", bio.bioPic);
+var formattedBioPic = HTMLbioPic.replace("%data%", bio.biopic);
 
 $("#header").prepend(formattedRole);
 $("#header").prepend(formattedName);
@@ -49,6 +47,13 @@ $("#topContacts").append(formattedTwitter);
 $("#topContacts").append(formattedLocation);
 
 $("#topContacts").append(formattedWelcomeMessage);
+
+$("#footerContacts").append(formattedMobile);
+$("#footerContacts").append(formattedEmail);
+$("#footerContacts").append(formattedGithub);
+$("#footerContacts").append(formattedTwitter);
+$("#footerContacts").append(formattedLocation);
+
 
 bio.display = function() {
     for (bio in bio.bio) {
@@ -90,7 +95,7 @@ var education = {
         "name": "American River College",
         "location": "Sacramento, CA, US",
         "degree": "In Progress",
-        "major": "Marketing",
+        "majors": "Marketing",
         "dates": "2012-2016",
     }],
     "onlineCourses": [{
@@ -112,7 +117,7 @@ education.display = function() {
         $(".education-entry:last").append(formattedSchoolLocation);
         var formattedSchoolDegree = HTMLschoolDegree.replace("%data%", education.schools[schools].degree);
         $(".education-entry:last").append(formattedSchoolDegree);
-        var formattedSchoolMajor = HTMLschoolMajor.replace("%data%", education.schools[schools].major);
+        var formattedSchoolMajor = HTMLschoolMajor.replace("%data%", education.schools[schools].majors);
         $(".education-entry:last").append(formattedSchoolMajor);
         var formattedSchoolDates = HTMLschoolDates.replace("%data%", education.schools[schools].dates);
         $(".education-entry:last").append(formattedSchoolDates);
