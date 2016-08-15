@@ -95,21 +95,21 @@ a {
 .welcome-message {
   font-style: italic;
   font-size: 18px;
-  color: #f3f3f3;
+  color: #ff33cc;
   line-height: 28px;
 }
 
 #skills-h3 {
-  color: #f5ae23;
+  color: #ff751a;
   display: none;
 }
 
 .orange {
-  background-color: #f5ae23;
+  background-color: #ff751a;
 }
 
 .orange-text {
-  color: #f5ae23;
+  color: #ff751a;
 }
 
 .white-text {
@@ -129,7 +129,7 @@ a {
 
 /* TODO: Replace with image later */
 #header {
-  background-color: #484848;
+  background-color: #6b6b47;
 }
 
 .flex-box {
