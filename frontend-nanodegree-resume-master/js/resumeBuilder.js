@@ -128,7 +128,7 @@ education.display = function() {
     }
 
     $("#education").append(HTMLonlineClasses);
-    for (var i=0; i < education.onlineCourses.length; i++) {
+    for (var n=0; n < education.onlineCourses.length; i++) {
         $("#education").append(HTMLschoolStart);
 
         var formattedTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[i].title);
