@@ -131,12 +131,12 @@ education.display = function() {
     for (var n=0; n < education.onlineCourses.length; n++) {
         $("#education").append(HTMLschoolStart);
 
-        var formattedTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[i].title);
-        var formattedSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[i].school);
+        var formattedTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[n].title);
+        var formattedSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[n].school);
         $(".education-entry:last").append(formattedTitle + formattedSchool);
 
-        $(".education-entry:last").append(HTMLonlineDates.replace("%data%", education.onlineCourses[i].dates));
-        $(".education-entry:last").append(HTMLonlineURL.replace("%data%", education.onlineCourses[i].url));
+        $(".education-entry:last").append(HTMLonlineDates.replace("%data%", education.onlineCourses[n].dates));
+        $(".education-entry:last").append(HTMLonlineURL.replace("%data%", education.onlineCourses[n].url));
     }
 };
 
