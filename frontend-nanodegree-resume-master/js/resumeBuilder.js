@@ -101,7 +101,7 @@ var education = {
         "name": "American River College",
         "location": "Sacramento, CA, US",
         "degree": "In Progress",
-        "majors": "Marketing",
+        "majors": ["Marketing"],
         "dates": "2012-2016",
         "url": "http://www.arc.losrios.edu/"
     }],
@@ -128,7 +128,7 @@ education.display = function() {
     }
 
     $("#education").append(HTMLonlineClasses);
-    for (var n=0; n < education.onlineCourses.length; i++) {
+    for (var n=0; n < education.onlineCourses.length; n++) {
         $("#education").append(HTMLschoolStart);
 
         var formattedTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[i].title);
