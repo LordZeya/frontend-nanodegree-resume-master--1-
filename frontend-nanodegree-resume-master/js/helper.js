@@ -135,9 +135,7 @@ function initializeMap() {
 
     // adds the single location property from bio to the locations array
     locations.push(bio.contacts.location);
-    locations.push(placesLived.location);
-    locations.push(placesLived1.location);
-    locations.push(placesLived2.location);
+
 
     // this loop doesn't work :(
     // for (var spot in placesLived) {
